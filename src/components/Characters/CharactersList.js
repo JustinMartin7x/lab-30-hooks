@@ -12,13 +12,13 @@ const CharacterList = ({ characters }) => {
     </li>
   ));
 
-  return <ul>{characterItems}</ul>;
+  return <ul data-testid="these">{characterItems}</ul>;
 };
 
 CharacterList.propTypes = {
   characters: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
+      id: PropTypes.string,
       name: PropTypes.string,
       image: PropTypes.string,
     })
